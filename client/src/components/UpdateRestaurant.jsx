@@ -63,7 +63,7 @@ const UpdateRestaurant = (props) => {
                 <option value = "4">$$$$</option>
                 <option value = "5">$$$$$</option>
             </select>
-        <button type="submit" onClick={handleSubmit} className="btn btn-primary ml-5">Submit</button>
+        <button type="submit" onClick={handleSubmit} className="btn btn-primary ml-5 mb-3">Submit</button>
         </form>
     </div>
   )

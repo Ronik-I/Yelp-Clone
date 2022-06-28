@@ -46,23 +46,23 @@ const handleRestaurantSelect = (id) => {
 };
 
 const renderRating = (restaurant) => {
-    if (!restaurant.count) {
-      return <span className="text-warning">0 reviews</span>;
-    }
-    return (
-      <>
-        <StarRating rating={restaurant.id} />
-        <span className="text-warning ml-1">({restaurant.count})</span>
-      </>
-    );
-  };
+  if (!restaurant.count) {
+    return <span><b>0 reviews</b></span>;
+  }
+  return (
+    <>
+      <StarRating rating={restaurant.average_rating} />
+      <span className="ml-1">({restaurant.count})</span>
+    </>
+  );
+};
 
   
   
   
     return (
     <div className='list-group'>
-        <table className="table table-hover table-dark">
+        <table className="opacity-75 table table-hover">
             <thead>
                 <tr className="bg-primary">
                     <th scope="col">Restaurants</th>
@@ -77,13 +77,13 @@ const renderRating = (restaurant) => {
                 {restaurants && restaurants.map((restaurant) => {
                     return(
                         <tr onClick={() => handleRestaurantSelect(restaurant.id)} key = {restaurant.id}>
-                        <td>{restaurant.name}</td>
-                        <td>{restaurant.location}</td>
+                        <td><strong>{restaurant.name}</strong></td>
+                        <td><strong>{restaurant.location}</strong></td>
                         <td>{"$".repeat(restaurant.price_range)}</td>
                         <td>{renderRating(restaurant)}</td>
-                        <td><button onClick={(e) => handleUpdate(e,restaurant.id)} className="btn btn-outline-warning">Update</button></td>
+                        <td><button onClick={(e) => handleUpdate(e,restaurant.id)} className="btn btn-success">Update</button></td>
                         <td>
-                    <button onClick={(e) => handleDelete(e, restaurant.id)} className="btn btn-outline-danger">Delete</button>
+                    <button onClick={(e) => handleDelete(e, restaurant.id)} className="btn btn-danger">Delete</button>
                     </td>
                     </tr>
                     );

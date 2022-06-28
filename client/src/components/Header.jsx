@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
+import "./css/headers.css";
 
 const Header = () => {
   return (
-    <div>
-        <h1 className="font-weight-light display-1 text-center">
-        YELP CLONE
-        </h1>
+    <div className="sign">
+      <span className="fast-flicker">y</span>elp-<span className="flicker">cl</span>one
     </div>
+
   );
 };
 
