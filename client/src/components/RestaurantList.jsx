@@ -62,9 +62,9 @@ const renderRating = (restaurant) => {
   
     return (
     <div className='list-group'>
-        <table className="opacity-75 table table-hover">
+        <table className="opacity-75 table table-hover table-borderless">
             <thead>
-                <tr className="bg-primary">
+                <tr className="table-active">
                     <th scope="col">Restaurants</th>
                     <th scope="col">Location</th>
                     <th scope="col">Price Range</th>

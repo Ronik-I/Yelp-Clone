@@ -8,8 +8,8 @@ const Reviews = ({ reviews }) => {
         return (
           <div
             key={review.id}
-            className="card text-white bg-success mb-3 mr-4"
-            style={{ maxWidth: "30%" }}
+            className="card text-black mb-3 mr-4"
+            style={{ maxWidth: "30%", background: "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(164,206,255,1) 100%)" }}
           >
             <div className="card-header d-flex justify-content-between">
               <span><b>{review.name}</b></span>

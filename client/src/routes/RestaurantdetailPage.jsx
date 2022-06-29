@@ -8,6 +8,16 @@ import Reviews from '../components/Reviews';
 import StarRating from '../components/StarRating';
 import { RestaurantsContext } from '../context/RestaurantsContext';
 
+const mystyle = {
+  color: "#f4ffb5",
+  textShadow: "3px 3px #000000",
+  padding: "10px",
+  fontFamily: 'Titan One',
+  fontSize: "80px",
+  textAlign: "center",
+  
+};
+
 const RestaurantdetailPage = () => {
   const {id} = useParams();
   const {selectedRestaurant, setSelectedRestaurant} = useContext(RestaurantsContext)
@@ -27,15 +37,16 @@ const RestaurantdetailPage = () => {
   return (
     <div>{selectedRestaurant && 
       <>
-      <h1 className='text-center display-1'>{selectedRestaurant.restaurant.name}</h1>
-      <div className="text-center">
+      <h1 style={mystyle}>{selectedRestaurant.restaurant.name}</h1>
+      {/* <p style={{fontfamily: 'Titan One', fontStyle: 'cursive'}}>{selectedRestaurant.restaurant.name}</p> */}
+      <h5><div className="text-center">
             <StarRating rating={selectedRestaurant.restaurant.average_rating} />
             <span className="ml-1">
               {selectedRestaurant.restaurant.count
                 ? `(${selectedRestaurant.restaurant.count})`
                 : "(0)"}
             </span>
-          </div>
+          </div></h5>
         <div className='mt-3 ml-4'>
           <Reviews reviews={selectedRestaurant.reviews}/>
         </div>
