@@ -4,9 +4,9 @@ import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 const AddReview = () => {
   const { id } = useParams();
-  const location = useLocation();
+  //const location = useLocation();
   //console.log(location);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   //console.log(id);
 
   const [name, setName] = useState("");
@@ -16,11 +16,11 @@ const AddReview = () => {
   const handleSubmitReview = async (e) => {
     e.preventDefault();
     try {
-      const response = await RestaurantFinder.post(`/${id}/addReview`, {
-        name,
-        review: reviewText,
-        rating,
-      });
+      // const response = await RestaurantFinder.post(`/${id}/addReview`, {
+      //   name,
+      //   review: reviewText,
+      //   rating,
+      // });
       window.location.reload()
     //   navigate("/");
     //   navigate(location.pathname);

@@ -9,8 +9,8 @@ import StarRating from '../components/StarRating';
 import { RestaurantsContext } from '../context/RestaurantsContext';
 
 const mystyle = {
-  color: "#f4ffb5",
-  textShadow: "3px 3px #000000",
+  color: "#BAFFCA",
+  textShadow: "0px 0px 10px #000000",
   padding: "10px",
   fontFamily: 'Titan One',
   fontSize: "80px",
